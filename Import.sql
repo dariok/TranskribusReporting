@@ -12,7 +12,7 @@
 
 -- DROP SCHEMA transkribusimport ;
 CREATE SCHEMA transkribusimport
-    AUTHORIZATION postgres;     -- change
+    AUTHORIZATION diariumreporting;     -- change
     
     
     
@@ -46,7 +46,7 @@ WITH (
 TABLESPACE pg_default;   -- change
 
 ALTER TABLE transkribusimport.documents
-    OWNER to postgres;   -- change
+    OWNER to diariumreporting;   -- change
     
     
     
@@ -91,7 +91,7 @@ WITH (
 TABLESPACE pg_default;   -- change
 
 ALTER TABLE transkribusimport.pages
-    OWNER to postgres;  --change
+    OWNER to diariumreporting;  --change
     
     
 -- Table: transkribusimport.textregions
@@ -121,7 +121,7 @@ WITH (
 TABLESPACE pg_default;  -- change
 
 ALTER TABLE transkribusimport.textregions
-    OWNER to postgres;   -- change
+    OWNER to diariumreporting;   -- change
     
 
 
@@ -154,7 +154,7 @@ WITH (
 TABLESPACE pg_default;   -- change
 
 ALTER TABLE transkribusimport.lines
-    OWNER to postgres;   -- change
+    OWNER to diariumreporting;   -- change
     
     
     
@@ -173,4 +173,4 @@ WITH (
 TABLESPACE pg_default;  -- change
 
 ALTER TABLE transkribusimport.version
-    OWNER to postgres;  -- change
+    OWNER to diariumreporting;  -- change
