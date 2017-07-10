@@ -1,3 +1,6 @@
+\t
+\a
+\o data.json
 select '{ "data": ' || array_to_json(array_agg(row_to_json(t))) || '}'
     from (
       select d.docid as id
