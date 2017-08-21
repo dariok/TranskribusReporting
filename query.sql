@@ -12,4 +12,5 @@ select '{ "data": ' || array_to_json(array_agg(row_to_json(t))) || '}'
         , p.nroftranscribedlines as lines
         , p.nroftranscribedwords as words 
         from transkribusimport.documents d JOIN transkribusimport.pages p using (docid)
+        where id > 19000
     ) t;
