@@ -1,6 +1,6 @@
 \t
 \a
-\o data.json
+\o /opt/TranskribusReporting/data.json
 select '{ "data": ' || array_to_json(array_agg(row_to_json(t))) || '}'
     from (
       select d.docid as id
@@ -12,5 +12,5 @@ select '{ "data": ' || array_to_json(array_agg(row_to_json(t))) || '}'
         , p.nroftranscribedlines as lines
         , p.nroftranscribedwords as words 
         from transkribusimport.documents d JOIN transkribusimport.pages p using (docid)
-        where d.docid > 19000
+        where d.docid > 19200
     ) t;
